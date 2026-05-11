@@ -51,18 +51,3 @@ setInterval(() => {
     `url(${random})`;
 
 }, 30000);
-
-//TEST 2
-setInterval(() => {
-
-    document.body.style.transform =
-    `translateX(${Math.random()*4-2}px)`;
-
-    setTimeout(() => {
-
-        document.body.style.transform =
-        "translateX(0px)";
-
-    }, 40);
-
-}, 3000);
