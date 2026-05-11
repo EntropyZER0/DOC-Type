@@ -52,27 +52,6 @@ setInterval(() => {
 
 }, 30000);
 
-// TESt 
-
-const sombra =
-document.createElement("div");
-
-sombra.style.position = "fixed";
-sombra.style.width = "20px";
-sombra.style.height = "20px";
-sombra.style.borderRadius = "50%";
-sombra.style.background = "rgba(255,255,255,0.1)";
-sombra.style.pointerEvents = "none";
-
-document.body.appendChild(sombra);
-
-document.addEventListener("mousemove", e => {
-
-    sombra.style.left = e.clientX + "px";
-    sombra.style.top = e.clientY + "px";
-
-});
-
 //TEST 2
 setInterval(() => {
 
