@@ -30,14 +30,37 @@
 
 /* Establece el fondo transparente para el menú */
 nav {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 20px;
-    position: fixed; /* Posiciona el menú en la parte superior de la página */
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    transition: background-color 0.5s; /* Transición suave para el cambio de color de fondo */
 
+    display: flex;
+    justify-content: center;
+
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.25);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    z-index: 999;
+
+    transition: 0.4s;
+}
+nav ul {
+    display: flex;
+    gap: 40px;
+
+    padding: 20px;
+}
+
+nav a {
+    position: relative;
+
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    transition: 0.3s;
 }
 
 /* Estilos para los elementos menu*/
@@ -68,35 +91,123 @@ a:hover {
 
 /*CONFIGURACION DEL BODY*/
 body {
-    /*configura los margenes de la página*/
-    margin-top: 0px; /* Ajusta según la altura del menú */
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+    url("img/fondo.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    overflow-x: hidden;
 }
 
 
 /*CONFIGURACION DEL CONTENIDO*/
 .contenido {
     /* configura el color, tamaño de fuente y alineación del texto en el cuerpo de la página */
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     padding: 5%;
     text-align:justify;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/* trASparENCia en ElFoOter*/
 .footer {
-    background-color: rgb(	128, 128, 128); /* Cambia el color de fondo a azul */
-    padding: 10rem;
-    color: #fffdfd;
-    color: #ffffff; /* Color del texto en el encabezado para asegurar la legibilidad */
-    text-align: center; /* Alinea el contenido al centro del encabezado */
-   /* Espacio de relleno interno para el contenido */
+
+    background: rgba(255,255,255,0.03);
+
+    backdrop-filter: blur(8px);
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 3rem;
+
+    margin-top: 5rem;
+
 
 }
-/*Efecto de texto ( No funciona ) */ 
+
+/* Cosas extra "EFECTOS" */
+nav a::before,
+nav a::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+nav a:hover::before {
+    animation: glitch1 0.3s infinite;
+    color: cyan;
+    opacity: 1;
+}
+
+nav a:hover::after {
+    animation: glitch2 0.3s infinite;
+    color: red;
+    opacity: 1;
+}
+/* No tocar */
+@keyframes glitch1 {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch2 {
+    0% { transform: translate(0); }
+    20% { transform: translate(2px, -2px); }
+    40% { transform: translate(2px, 2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0); }
+}
+
+/* Efecto de pantalla */
+.glitch-screen {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background: rgba(255, 0, 153, 0.03);
+
+    opacity: 0;
+
+    z-index: 9999;
+}
+
+/* Movimiento parpadeo */ 
+main {
+    animation: floatUI 6s ease-in-out infinite;
+}
+
+@keyframes floatUI {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+}
+/*FOOTER EXTRAS CONFIG*/
+.footer:hover {
+    background: rgba(255,255,255,0.06);
+    transition: 0.4s;
+}
+
+/*DA DA DA TTEXTTO AWAWA */ 
 #transmission {
 
     position: fixed;
@@ -122,7 +233,7 @@ body {
     pointer-events: none;
 }
 
-/* LISTAS CONFIG */
+/* TESTEO DE LISTAS */
 
 .archive-list {
 
