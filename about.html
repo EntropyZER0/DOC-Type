@@ -1,66 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!--invoca al archivo style.css que contiene todas las configuraciones de estilos de la página-->
-<link rel="stylesheet" href="styles.css">
- 
-<!--Encabezado, el valor atributo id invoca a una funcion del archivo style.css para dar el formato del menu-->
-<header id="mi-encabezado"></header>
+<head>
 
-<title>CURSO HTML</title>
- <!--create a navigation bar-->
- <!--Creacion del menú utilizando nav-->
-<nav>    
-        <ul>
-            <a href="index.html" data-text="Inicio">Inicio</a>
-            <a href="about.html" data-text="Acerca De">Acerca Des</a>
-            <a href="contact.html" data-text="Contacto">Contacto</a>
-        </ul>
-</nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</header>
+    <title>ABOUT_ARCHIVE</title>
 
-<!--Cuerpo del HTML. Las configuraciones de estilos se encuentran en el archivo style.css-->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
 <body>
 
+    <!-- Fondo dinamico -->
+    <div class="bg-gif"></div>
+
+    <!-- Glitch overlay -->
+    <div class="glitch-screen"></div>
+
+    <!-- Navegacion -->
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html" data-text="Inicio">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html" data-text="Acerca De">
+                    Acerca De
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" data-text="Contacto">
+                    Contacto
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Header -->
+    <header class="secondary-header">
+
+        <h1>
+            ARCHIVE INFORMATION
+        </h1>
+
+        <p>
+            Algunos registros fueron alterados.
+        </p>
+
+    </header>
+
+    <!-- Mensajes ARG -->
+    <div id="transmission"></div>
+
+    <!-- Contenido -->
     <main>
 
-        <!--*CONFIGURACION DEL TEXTO EN EL CUERPO. El tamño y tipo de letra estan especificados en el archivo style.css*-->
         <section class="contenido">
-            <h2> Espacios Liminales...
-            <tr><td> <hr>
-                </hr></h2>
+
+            <h1>
+                Sobre el Proyecto
+            </h1>
+
+            <hr>
+
+            <p>
+                Este sitio funciona como una interfaz experimental enfocada en diseño web,
+                horror analógico y simulación de sistemas digitales antiguos.
+            </p>
+
+            <p>
+                La estética intenta replicar señales deterioradas,
+                terminales antiguas y archivos encontrados.
+            </p>
+
+            <!-- Timeline ARG -->
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <span>
+                        1998
+                    </span>
+
+                    Primer registro del sistema.
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <span>
+                        2003
+                    </span>
+
+                    Señales detectadas debajo del servidor.
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <span>
+                        2009
+                    </span>
+
+                    El pasillo fue sellado.
+
+                </div>
+
+                <div class="timeline-item corrupt-text">
+
+                    <span>
+                        ????
+                    </span>
+
+                    T̷H̶E̴ ̷D̴O̷O̶R̵ ̵R̸E̸O̷P̵E̷N̵E̷D̴
+
+                </div>
+
+            </div>
+
+            <!-- Caja de informacion -->
+            <div class="info-panel">
+
+                <h2>
+                    Estado Actual
+                </h2>
+
                 <p>
-                    Los espacios liminales son lugares de transición, es decir, espacios que no son ni un punto de partida
-                    ni un destino final, sino que conectan dos áreas o situaciones diferentes. El término "liminal"
-                    proviene del latín limen, que significa "umbral" o "frontera". En este contexto, se refiere a los
-                    espacios que están "en el umbral", en el medio de un proceso o cambio.
-                </p>
-                <p><b>Ejemplos comunes de espacios liminales incluyen:</b> <br>
-                    ▶Vestíbulos o entradas de edificios.<br>
-                    ▶Estaciones de tren o aeropuertos.<br>
-                    ▶Puentes o carreteras desiertas.<br>
-                    ▶Pasillos que conectan habitaciones.<br>
+                    El sistema continúa operativo.
                 </p>
 
-                <p> 
-                    Aunque son lugares físicos, los espacios liminales también tienen un significado simbólico.
-                    Representan momentos intermedios en la vida o en la experiencia humana, donde uno está en
-                    medio de una transición. Por ejemplo, pasar de una fase de la vida a otra, como la adolescencia a la
-                    adultez, o mudarse de una ciudad a otra, puede sentirse como estar en un espacio liminal: una zona
-                    de transición que aún no ha alcanzado una resolución completa.
+                <p>
+                    Algunas secciones permanecen inaccesibles.
                 </p>
-                            <div id="transmission"></div>
-                </td></tr>
-            
+
+            </div>
+
+            <!-- Comentario oculto -->
+            <!-- there is another floor -->
+
         </section>
+
     </main>
 
-    <!--Pie de pagina-->
-    <!--el atributo Class="footer" invoca a una funcion del archivo style.css para dar el formato del pie de pagina-->
-    <div class="footer">Derechos reservados © 2026 Windmill</div>
-    
-    <!--Invoca al archivo script.js que contiene la funcion que controla el comportamiento del menu-->
+    <!-- Footer -->
+    <footer class="footer">
+
+        ARCHIVE STATUS: ACTIVE
+
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
