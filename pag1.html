@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Declara HTML5 (sin esto el navegador entra en "quirks mode" y se ve distinto) -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- necesario para que se vea bien en celular -->
+    <title>Tradiciones y costumbres | Cultura de El Salvador</title>
+    <!-- Todos los estilos del sitio están en styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== CAPAS DE FONDO Y EFECTOS (no contienen texto) =====
+         .fondo    : los GIF de fondo (los inserta script.js)
+         .velo     : oscurece el fondo para leer mejor
+         canvas    : luciérnagas animadas
+         .luz-cursor / .scanlines / .progreso : efectos visuales -->
+    <div class="fondo"></div>
+    <div class="velo"></div>
+    <canvas id="luciernagas"></canvas>
+    <div class="luz-cursor"></div>
+    <div class="scanlines"></div>
+    <div class="progreso"></div>
+
+    <!-- ===== MENÚ LATERAL =====
+         Para agregar una página: copia un <li> y cambia href y texto.
+         Recuerda actualizarlo en TODAS las páginas. -->
+    <button class="btn-menu" aria-label="Abrir menú">☰</button>
+    <nav class="menu-lateral">
+        <div class="marca">// CULTURA</div>
+        <div class="marca-titulo">El Salvador</div>
+        <ul>
+            <li><a href="index.html"><small>00</small><span data-text="Inicio">Inicio</span></a></li>
+            <li><a href="pag1.html" class="activo"><small>01</small><span data-text="Tradiciones y costumbres">Tradiciones y costumbres</span></a></li>
+            <li><a href="pag2.html"><small>02</small><span data-text="Vestimenta tradicional">Vestimenta tradicional</span></a></li>
+            <li><a href="pag3.html"><small>03</small><span data-text="Identidad salvadoreña">Identidad salvadoreña</span></a></li>
+            <li><a href="pag4.html"><small>04</small><span data-text="Lenguas">Lenguas</span></a></li>
+            <li><a href="pag5.html"><small>05</small><span data-text="Patrimonio cultural">Patrimonio cultural</span></a></li>
+            <li><a href="pag6.html"><small>06</small><span data-text="Pueblos indígenas">Pueblos indígenas</span></a></li>
+        </ul>
+        <div class="menu-pie">CUSCATLÁN · 2026</div>
+    </nav>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+
+        <!-- Encabezado de la página -->
+        <header class="hero">
+            <div class="codigo">[PAG_01]</div>
+            <h1>Tradiciones y costumbres</h1>
+            <p>Festividades religiosas, patronales y folclóricas que reúnen a comunidades enteras a lo largo del año.</p>
+            <div class="greca"></div>
+        </header>
+
+        <!-- ===== PANEL: Tradiciones de El Salvador ===== -->
+        <section class="panel reveal">
+            <h2>Tradiciones de El Salvador</h2>
+            <p>Las tradiciones de El Salvador abarcan festividades religiosas, patronales y folclóricas que reúnen a comunidades enteras a lo largo del año. Estas expresiones reflejan tanto la fe popular como la memoria histórica del país.</p>
+        </section>
+
+        <!-- ===== PANEL: Fiestas patronales y religiosas ===== -->
+        <section class="panel reveal">
+            <h2>Fiestas patronales y religiosas</h2>
+<div class="archive-list">
+  <div class="entry reveal"><span class="code">[T_01]</span><b>Fiestas Agostinas:</b> Celebradas a principios de agosto en honor a San Salvador (el Divino Salvador del Mundo), patrono de la capital. Destacan las alboradas, desfiles de carrozas, personajes folclóricos como las «Cachiporristas» y los «Viejos de Agosto», concluyendo con la solemne procesión de La Transfiguración.</div>
+  <div class="entry reveal"><span class="code">[T_02]</span><b>Día de los Santos Difuntos (2 de noviembre):</b> Las familias acuden a los cementerios para limpiar y decorar las tumbas de sus seres queridos con flores naturales y de papel. Es costumbre consumir alimentos tradicionales como los ayotes en miel y las hojuelas.</div>
+  <div class="entry reveal"><span class="code">[T_03]</span><b>Día de la Cruz (3 de mayo):</b> Tradición que marca el inicio de la estación lluviosa y la época de siembra. Se coloca una cruz de árbol de jiote en el patio o jardín, adornada con frutas de temporada (mangos, jocotes, marañones) y guirnaldas de papel picado, rindiendo homenaje a la fertilidad de la tierra.</div>
+  <div class="entry reveal"><span class="code">[T_04]</span><b>Los Bolos de Panchimalco (Fiesta de las Flores y las Palmas):</b> Celebrada en mayo en Panchimalco, donde los habitantes decoran grandes palmas con flores multicolores para procesiones en honor a la Virgen María.</div>
+</div>
+
+        </section>
+
+        <!-- ===== PANEL: Fiestas patronales de El Salvador ===== -->
+        <section class="panel reveal">
+            <h2>Fiestas patronales de El Salvador</h2>
+            <p>Las <strong>fiestas patronales</strong> son celebraciones tradicionales que se realizan en diferentes municipios de El Salvador en honor a su <strong>santo patrono o patrona</strong>. Combinan actividades religiosas, culturales, familiares y recreativas. Son una parte importante de la cultura salvadoreña porque permiten que las comunidades mantengan vivas sus tradiciones y fortalezcan la convivencia entre sus habitantes.</p>
+            <h3>Puntos importantes</h3>
+<div class="archive-list">
+  <div class="entry reveal"><span class="code">[F_01]</span><b>Origen religioso:</b> Se realizan principalmente en honor al santo patrono de cada municipio.</div>
+  <div class="entry reveal"><span class="code">[F_02]</span><b>Procesiones:</b> Recorridos con imágenes religiosas por las calles de la comunidad.</div>
+  <div class="entry reveal"><span class="code">[F_03]</span><b>Actividades religiosas:</b> Incluyen misas, rezos, novenas y otras actividades de carácter religioso.</div>
+  <div class="entry reveal"><span class="code">[F_04]</span><b>Desfiles y eventos culturales:</b> Pueden incluir desfiles, presentaciones artísticas, danzas tradicionales y música.</div>
+  <div class="entry reveal"><span class="code">[F_05]</span><b>Juegos y entretenimiento:</b> Se organizan juegos mecánicos, actividades para niños y diferentes espectáculos.</div>
+  <div class="entry reveal"><span class="code">[F_06]</span><b>Gastronomía:</b> Comidas y bebidas tradicionales, como pupusas, tamales, dulces y otros platillos.</div>
+  <div class="entry reveal"><span class="code">[F_07]</span><b>Puestos y ventas:</b> Ventas de comida, artesanías, juguetes y productos diversos.</div>
+  <div class="entry reveal"><span class="code">[F_08]</span><b>Música y baile:</b> Conciertos, bailes y presentaciones musicales.</div>
+  <div class="entry reveal"><span class="code">[F_09]</span><b>Participación comunitaria:</b> Familias, comerciantes, organizaciones y habitantes colaboran en la celebración.</div>
+  <div class="entry reveal"><span class="code">[F_10]</span><b>Tradiciones:</b> Costumbres propias de cada municipio, transmitidas de generación en generación.</div>
+  <div class="entry reveal"><span class="code">[F_11]</span><b>Economía local:</b> Las celebraciones pueden beneficiar a comerciantes y pequeños negocios de la localidad.</div>
+  <div class="entry reveal"><span class="code">[F_12]</span><b>Identidad cultural:</b> Ayudan a conservar las costumbres y fortalecen el sentido de pertenencia de las comunidades.</div>
+</div>
+
+            <h3>Ejemplos</h3>
+            <p>Algunas fiestas patronales conocidas son las <strong>Fiestas Agostinas de San Salvador</strong>, dedicadas al <strong>Divino Salvador del Mundo</strong>, y las fiestas patronales de diferentes municipios como <strong>Santa Ana, San Miguel, Sonsonate y Suchitoto</strong>, cada una con sus propias tradiciones y actividades.</p>
+            <p class="cierre">Las fiestas patronales unen la religión, la cultura, la gastronomía, la música y la convivencia comunitaria, formando parte de las tradiciones que identifican a El Salvador.</p>
+        </section>
+
+        <!-- Botones anterior / siguiente -->
+        <div class="pager"><a href="index.html">◀ Inicio</a><a href="pag2.html">Vestimenta tradicional ▶</a></div>
+    </main>
+
+    <!-- Pie de página -->
+    <div class="footer">Derechos reservados © 2026 Grupo 5</div>
+
+    <!-- Texto estilo VHS (esquina inferior derecha), lo anima script.js -->
+    <div id="transmission"></div>
+
+    <!-- Toda la interactividad está en script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

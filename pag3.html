@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Declara HTML5 (sin esto el navegador entra en "quirks mode" y se ve distinto) -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- necesario para que se vea bien en celular -->
+    <title>Identidad salvadoreña | Cultura de El Salvador</title>
+    <!-- Todos los estilos del sitio están en styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== CAPAS DE FONDO Y EFECTOS (no contienen texto) =====
+         .fondo    : los GIF de fondo (los inserta script.js)
+         .velo     : oscurece el fondo para leer mejor
+         canvas    : luciérnagas animadas
+         .luz-cursor / .scanlines / .progreso : efectos visuales -->
+    <div class="fondo"></div>
+    <div class="velo"></div>
+    <canvas id="luciernagas"></canvas>
+    <div class="luz-cursor"></div>
+    <div class="scanlines"></div>
+    <div class="progreso"></div>
+
+    <!-- ===== MENÚ LATERAL =====
+         Para agregar una página: copia un <li> y cambia href y texto.
+         Recuerda actualizarlo en TODAS las páginas. -->
+    <button class="btn-menu" aria-label="Abrir menú">☰</button>
+    <nav class="menu-lateral">
+        <div class="marca">// CULTURA</div>
+        <div class="marca-titulo">El Salvador</div>
+        <ul>
+            <li><a href="index.html"><small>00</small><span data-text="Inicio">Inicio</span></a></li>
+            <li><a href="pag1.html"><small>01</small><span data-text="Tradiciones y costumbres">Tradiciones y costumbres</span></a></li>
+            <li><a href="pag2.html"><small>02</small><span data-text="Vestimenta tradicional">Vestimenta tradicional</span></a></li>
+            <li><a href="pag3.html" class="activo"><small>03</small><span data-text="Identidad salvadoreña">Identidad salvadoreña</span></a></li>
+            <li><a href="pag4.html"><small>04</small><span data-text="Lenguas">Lenguas</span></a></li>
+            <li><a href="pag5.html"><small>05</small><span data-text="Patrimonio cultural">Patrimonio cultural</span></a></li>
+            <li><a href="pag6.html"><small>06</small><span data-text="Pueblos indígenas">Pueblos indígenas</span></a></li>
+        </ul>
+        <div class="menu-pie">CUSCATLÁN · 2026</div>
+    </nav>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+
+        <!-- Encabezado de la página -->
+        <header class="hero">
+            <div class="codigo">[PAG_03]</div>
+            <h1>Identidad salvadoreña</h1>
+            <p>Lo que nos hace salvadoreños: historia, geografía volcánica y espíritu trabajador.</p>
+            <div class="greca"></div>
+        </header>
+
+        <!-- ===== PANEL: Identidad nacional ===== -->
+        <section class="panel reveal">
+            <h2>Identidad nacional</h2>
+            <p>La identidad nacional de El Salvador se ha forjado a través de la historia, la geografía volcánica y el espíritu trabajador de su población, tanto en el territorio nacional como en la diáspora alrededor del mundo.</p>
+        </section>
+
+        <!-- ===== PANEL: Elementos fundamentales de la identidad ===== -->
+        <section class="panel reveal">
+            <h2>Elementos fundamentales de la identidad</h2>
+<div class="archive-list">
+  <div class="entry reveal"><span class="code">[ID_01]</span><b>Resiliencia y trabajo duro:</b> La población salvadoreña es reconocida por su dedicación al trabajo, su capacidad de superación ante las adversidades naturales y sociales, y su sentido de solidaridad comunitaria.</div>
+  <div class="entry reveal"><span class="code">[ID_02]</span><b>El lenguaje y el caló salvadoreño:</b> El uso del voseo y términos particulares («cipote», «guanaco», «chero», «bicho») fortalecen el sentido de pertenencia y complicidad cultural entre los salvadoreños.</div>
+  <div class="entry reveal"><span class="code">[ID_03]</span><b>La diáspora y la conexión transnacional:</b> La comunidad salvadoreña en el extranjero mantiene un vínculo permanente con el país, influyendo en la economía, las costumbres y la preservación de las tradiciones culinarias e idiolectos en el exterior.</div>
+  <div class="entry reveal"><span class="code">[ID_04]</span><b>Símbolos patrios y sentido de pertenencia:</b> El orgullo por la bandera nacional, el torogoz (ave nacional), el árbol de maquilishuat y los paisajes volcánicos representan la belleza natural y el origen común de la nación.</div>
+</div>
+
+        </section>
+
+        <!-- Botones anterior / siguiente -->
+        <div class="pager"><a href="pag2.html">◀ Vestimenta tradicional</a><a href="pag4.html">Lenguas ▶</a></div>
+    </main>
+
+    <!-- Pie de página -->
+    <div class="footer">Derechos reservados © 2026 Grupo 5</div>
+
+    <!-- Texto estilo VHS (esquina inferior derecha), lo anima script.js -->
+    <div id="transmission"></div>
+
+    <!-- Toda la interactividad está en script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

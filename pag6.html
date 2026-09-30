@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Declara HTML5 (sin esto el navegador entra en "quirks mode" y se ve distinto) -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- necesario para que se vea bien en celular -->
+    <title>Pueblos indígenas | Cultura de El Salvador</title>
+    <!-- Todos los estilos del sitio están en styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== CAPAS DE FONDO Y EFECTOS (no contienen texto) =====
+         .fondo    : los GIF de fondo (los inserta script.js)
+         .velo     : oscurece el fondo para leer mejor
+         canvas    : luciérnagas animadas
+         .luz-cursor / .scanlines / .progreso : efectos visuales -->
+    <div class="fondo"></div>
+    <div class="velo"></div>
+    <canvas id="luciernagas"></canvas>
+    <div class="luz-cursor"></div>
+    <div class="scanlines"></div>
+    <div class="progreso"></div>
+
+    <!-- ===== MENÚ LATERAL =====
+         Para agregar una página: copia un <li> y cambia href y texto.
+         Recuerda actualizarlo en TODAS las páginas. -->
+    <button class="btn-menu" aria-label="Abrir menú">☰</button>
+    <nav class="menu-lateral">
+        <div class="marca">// CULTURA</div>
+        <div class="marca-titulo">El Salvador</div>
+        <ul>
+            <li><a href="index.html"><small>00</small><span data-text="Inicio">Inicio</span></a></li>
+            <li><a href="pag1.html"><small>01</small><span data-text="Tradiciones y costumbres">Tradiciones y costumbres</span></a></li>
+            <li><a href="pag2.html"><small>02</small><span data-text="Vestimenta tradicional">Vestimenta tradicional</span></a></li>
+            <li><a href="pag3.html"><small>03</small><span data-text="Identidad salvadoreña">Identidad salvadoreña</span></a></li>
+            <li><a href="pag4.html"><small>04</small><span data-text="Lenguas">Lenguas</span></a></li>
+            <li><a href="pag5.html"><small>05</small><span data-text="Patrimonio cultural">Patrimonio cultural</span></a></li>
+            <li><a href="pag6.html" class="activo"><small>06</small><span data-text="Pueblos indígenas">Pueblos indígenas</span></a></li>
+        </ul>
+        <div class="menu-pie">CUSCATLÁN · 2026</div>
+    </nav>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+
+        <!-- Encabezado de la página -->
+        <header class="hero">
+            <div class="codigo">[PAG_06]</div>
+            <h1>Pueblos indígenas</h1>
+            <p>De las sociedades prehispánicas a la resistencia: la memoria de quienes habitaron estas tierras primero.</p>
+            <div class="greca"></div>
+        </header>
+
+        <!-- ===== PANEL: Historia de los pueblos indígenas ===== -->
+        <section class="panel reveal">
+            <h2>Historia de los pueblos indígenas</h2>
+            <p>Los pueblos indígenas de El Salvador tienen una historia marcada por su desarrollo prehispánico, la conquista española y los ciclos de resistencia y opresión que continuaron durante la época colonial y republicana.</p>
+            <p class="cierre">Recorre la línea de tiempo hacia abajo.</p>
+        </section>
+
+        <!-- ===== LÍNEA DE TIEMPO =====
+             Para añadir un hito, copia un bloque <article class="hito"> -->
+        <div class="linea">
+            <!-- Hito: Antes de la Conquista: sociedades complejas -->
+            <article class="hito reveal">
+                <div class="panel" style="margin:0">
+                    <div class="fecha">ANTES DE 1524</div>
+                    <h3 style="margin-top:6px">Antes de la Conquista: sociedades complejas</h3>
+                    <p>Antes de la llegada de los españoles, el territorio que hoy es El Salvador estaba habitado por varios grupos con organizaciones sociales y políticas avanzadas.</p>
+                    <p><strong>Los Pipiles (Nahua-Pipil):</strong> el grupo más extendido. Migraron desde México y se establecieron en el centro y occidente del país. Su sociedad no era tribal, sino que formaban <strong>señoríos o estados</strong> con una estructura de clases clara: nobles, plebeyos y esclavos. Su economía se basaba en la agricultura (maíz, cacao, algodón) y el tributo. Tenían mercados o <i>tianguis</i> donde se intercambiaban productos, e incluso usaban el cacao como moneda. Los señoríos de Cuscatlán e Izalco fueron los más importantes.</p>
+                    <p><strong>Los Lencas:</strong> ocuparon la zona oriental y central del país. Su origen es más antiguo y se les considera un pueblo con raíces propias de Centroamérica. Se organizaban en confederaciones de señoríos, cada uno gobernado por un líder principal con sucesión hereditaria. Practicaban una agricultura de maíz y frijol muy productiva, con dos cosechas al año.</p>
+                    <p><strong>Los Kakawira (Cacaopera):</strong> habitaron la zona norte de Morazán. Su nombre significa «Huerta o Muralla de Cacao». La tradición oral los vincula a migraciones de grupos chontales, queribles y chorotegas, y su fundación actual se remonta a mediados del siglo XVI.</p>
+                    <p><strong>Mayas Chortí:</strong> vivieron en la zona norte de Chalatenango y Santa Ana, siendo el grupo maya más meridional. Su presencia conectaba El Salvador con la región de Copán en Honduras.</p>
+                </div>
+            </article>
+            <!-- Hito: La Conquista y la resistencia -->
+            <article class="hito reveal">
+                <div class="panel" style="margin:0">
+                    <div class="fecha">1524 – 1537</div>
+                    <h3 style="margin-top:6px">La Conquista y la resistencia</h3>
+                    <p>La invasión española, liderada por Pedro de Alvarado en 1524, desató una resistencia que duró décadas.</p>
+                    <p><strong>Resistencia Pipil:</strong> los señoríos de Cuscatlán opusieron una fuerte resistencia, pero finalmente fueron sometidos. La conquista trajo consigo masacres, esclavitud y enfermedades que diezmaron a la población.</p>
+                    <p><strong>La rebelión Lenca (1537):</strong> el cacique <strong>Lempira</strong> unificó a los pueblos lencas (cares, cerquines, potones y lencas) en una confederación de tribus y lideró una rebelión que duró más de seis meses, resistiendo en fortalezas como el peñón de Cerquín. Aunque Lempira fue asesinado, su figura se convirtió en un símbolo de resistencia.</p>
+                    <p><strong>Conquista Chortí:</strong> el «Reino Payaquí» (señorío Chortí) fue conquistado en 1530 tras vencer a su líder, Copán Galel.</p>
+                </div>
+            </article>
+            <!-- Hito: La Colonia: opresión y reorganización -->
+            <article class="hito reveal">
+                <div class="panel" style="margin:0">
+                    <div class="fecha">ÉPOCA COLONIAL</div>
+                    <h3 style="margin-top:6px">La Colonia: opresión y reorganización</h3>
+                    <p>Durante la época colonial, los pueblos indígenas sufrieron un sistema de explotación brutal.</p>
+                    <p><strong>Encomiendas y tributos:</strong> los indígenas fueron obligados a pagar tributo a los encomenderos españoles en forma de productos agrícolas y artesanías. También fueron forzados a trabajar en la minería y otras tareas bajo condiciones de esclavitud.</p>
+                    <p><strong>Reducciones:</strong> los españoles agruparon a la población indígena en «pueblos de indios» para controlarla, cobrar tributos y evangelizarla. Esto desarticuló sus formas de organización tradicional y afectó a comunidades como la lenca.</p>
+                    <p><strong>Aculturación:</strong> se impuso la religión católica y se destruyeron templos y códices. Sin embargo, muchas prácticas ancestrales sobrevivieron de forma sincrética, ocultas tras rituales católicos. Las cofradías se convirtieron en espacios clave para preservar la cosmovisión indígena.</p>
+                </div>
+            </article>
+            <!-- Hito: Época republicana: despojo y nuevas luchas -->
+            <article class="hito reveal">
+                <div class="panel" style="margin:0">
+                    <div class="fecha">DESDE 1821</div>
+                    <h3 style="margin-top:6px">Época republicana: despojo y nuevas luchas</h3>
+                    <p>Tras la independencia (1821), la situación no mejoró sustancialmente para los pueblos indígenas.</p>
+                    <p><strong>Despojo de tierras:</strong> las leyes liberales del siglo XIX buscaron privatizar las tierras comunales, lo que afectó profundamente a las comunidades indígenas y campesinas.</p>
+                </div>
+            </article>
+            <!-- Hito: Levantamiento de Anastasio Aquino -->
+            <article class="hito reveal">
+                <div class="panel" style="margin:0">
+                    <div class="fecha">1833</div>
+                    <h3 style="margin-top:6px">Levantamiento de Anastasio Aquino</h3>
+                    <p>Anastasio Mártir Aquino, un líder indígena de los Nonualcos, encabezó una sublevación contra las políticas de despojo y las injusticias sociales. Aunque fue derrotado, es un hito en la historia de la resistencia campesina.</p>
+                </div>
+            </article>
+            <!-- Hito: La Matanza -->
+            <article class="hito reveal">
+                <div class="panel" style="margin:0">
+                    <div class="fecha">1932</div>
+                    <h3 style="margin-top:6px">La Matanza</h3>
+                    <p>Este es el evento más traumático del siglo XX. Tras una insurrección campesina e indígena en el occidente del país, el gobierno ordenó una represión masiva. Se estima que más de <strong>50,000 personas</strong>, en su mayoría indígenas y campesinos, fueron asesinadas. Líderes como Feliciano Ama (líder indígena de Izalco) y Farabundo Martí fueron figuras centrales de este episodio.</p>
+                    <p class="cierre">El impacto fue tan brutal que, por décadas, muchas familias indígenas ocultaron su identidad y su idioma para sobrevivir a la persecución.</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Botones anterior / siguiente -->
+        <div class="pager"><a href="pag5.html">◀ Patrimonio cultural</a><a href="index.html">Volver al inicio ▶</a></div>
+    </main>
+
+    <!-- Pie de página -->
+    <div class="footer">Derechos reservados © 2026 Grupo 5</div>
+
+    <!-- Texto estilo VHS (esquina inferior derecha), lo anima script.js -->
+    <div id="transmission"></div>
+
+    <!-- Toda la interactividad está en script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
